@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/admin/kois")
@@ -20,5 +21,9 @@ public class KoiController {
     @GetMapping
     public List<Koi> getAllKois() {
         return koiService.getAllKois();
+    }
+    @GetMapping("/{id}")
+    public Optional<Koi> getKoiById(@PathVariable Long id){
+        return koiService.getKoiById(id);
     }
 }
