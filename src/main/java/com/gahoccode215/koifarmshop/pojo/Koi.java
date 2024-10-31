@@ -30,4 +30,5 @@ public class Koi {
     private String size;
     //Giới tính (true == đực, false == cái)
     private boolean sex;
+    private boolean deleted = false;
 }

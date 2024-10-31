@@ -5,6 +5,8 @@ import com.gahoccode215.koifarmshop.repository.KoiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class KoiServiceImpl {
     @Autowired
@@ -12,5 +14,8 @@ public class KoiServiceImpl {
 
     public Koi addKoi(Koi koi){
         return koiRepository.save(koi);
+    }
+    public List<Koi> getAllKois(){
+        return koiRepository.findAll();
     }
 }
