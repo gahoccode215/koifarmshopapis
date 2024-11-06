@@ -22,4 +22,5 @@ public class KoiServiceImpl {
     public Optional<Koi> getKoiById(Long id){
         return koiRepository.findById(id);
     }
+
 }
